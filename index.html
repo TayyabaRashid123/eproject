@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRS Electrical Appliances - Testing Records</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>SRS Electrical Appliances - Testing Records</h1>
+
+    <!-- Add Product Form -->
+    <h2>Add Product</h2>
+    <form action="insert_record.php" method="POST">
+        <label for="product_name">Product Name:</label>
+        <input type="text" id="product_name" name="product_name" required><br><br>
+
+        <label for="product_description">Product Description:</label>
+        <textarea id="product_description" name="product_description" required></textarea><br><br>
+
+        <label for="product_type">Product Type:</label>
+        <input type="text" id="product_type" name="product_type" required><br><br>
+
+        <input type="submit" name="submit_product" value="Add Product">
+    </form>
+
+    <!-- Add Testing Form -->
+    <h2>Add Testing Record</h2>
+    <form action="insert_record.php" method="POST">
+        <label for="product_id">Product ID:</label>
+        <input type="text" id="product_id" name="product_id" required><br><br>
+
+        <label for="testing_type">Testing Type:</label>
+        <input type="text" id="testing_type" name="testing_type" required><br><br>
+
+        <label for="testing_performed">Testing Performed:</label>
+        <textarea id="testing_performed" name="testing_performed" required></textarea><br><br>
+
+        <label for="remarks">Remarks:</label>
+        <textarea id="remarks" name="remarks"></textarea><br><br>
+
+        <label for="result">Result (Passed/Failed):</label>
+        <input type="text" id="result" name="result" required><br><br>
+
+        <label for="tester_name">Tester Name:</label>
+        <input type="text" id="tester_name" name="tester_name" required><br><br>
+
+        <label for="revision">Revision:</label>
+        <input type="text" id="revision" name="revision" value="1" required><br><br>
+
+        <input type="submit" name="submit_testing" value="Add Testing Record">
+    </form>
+
+    <!-- Advanced Search Form -->
+    <h2>Advanced Search</h2>
+    <form action="search_results.php" method="GET">
+        <label for="search_type">Search By:</label>
+        <select id="search_type" name="search_type">
+            <option value="product_id">Product ID</option>
+            <option value="tester_name">Tester Name</option>
+            <option value="status">Testing Status</option>
+        </select><br><br>
+
+        <label for="search_value">Search Value:</label>
+        <input type="text" id="search_value" name="search_value" required><br><br>
+
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>
